@@ -1,0 +1,342 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Barrel_Jack_Switch J1
+U 1 1 5E53762F
+P 4150 4200
+F 0 "J1" H 3921 4150 50  0000 R CNN
+F 1 "Power" H 3921 4241 50  0000 R CNN
+F 2 "Connectors:BARREL_JACK" H 4200 4160 50  0001 C CNN
+F 3 "~" H 4200 4160 50  0001 C CNN
+	1    4150 4200
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector:AudioJack3 J3
+U 1 1 5E538E9A
+P 4750 5050
+F 0 "J3" H 4471 4983 50  0000 R CNN
+F 1 "INPUT" H 4471 5074 50  0000 R CNN
+F 2 "Sparkfun_Connectors:AUDIO_JACK_0.25%5c%22_TRS_PTH_RA" H 4750 5050 50  0001 C CNN
+F 3 "~" H 4750 5050 50  0001 C CNN
+	1    4750 5050
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector:AudioJack3 J4
+U 1 1 5E53A400
+P 7000 5050
+F 0 "J4" H 6720 4983 50  0000 R CNN
+F 1 "OUTPUT" H 6720 5074 50  0000 R CNN
+F 2 "Sparkfun_Connectors:AUDIO_JACK_0.25%5c%22_TRS_PTH_RA" H 7000 5050 50  0001 C CNN
+F 3 "~" H 7000 5050 50  0001 C CNN
+	1    7000 5050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_3PDT SW1
+U 1 1 5E53C189
+P 5850 4700
+F 0 "SW1" V 5896 4112 50  0000 R CNN
+F 1 "SW_3PDT" V 5805 4112 50  0000 R CNN
+F 2 "Sparkfun_Switches:STOMP_SWITCH_3PDT" H 5850 5100 50  0001 C CNN
+F 3 "~" H 5850 5100 50  0001 C CNN
+	1    5850 4700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5E543A7A
+P 5750 3850
+F 0 "D1" H 5743 3595 50  0000 C CNN
+F 1 "LED" H 5743 3686 50  0000 C CNN
+F 2 "LEDs:LED_D5.0mm" H 5750 3850 50  0001 C CNN
+F 3 "~" H 5750 3850 50  0001 C CNN
+	1    5750 3850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R RLED1
+U 1 1 5E5449F4
+P 5950 4050
+F 0 "RLED1" H 6020 4096 50  0000 L CNN
+F 1 "R" H 6020 4005 50  0000 L CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5880 4050 50  0001 C CNN
+F 3 "~" H 5950 4050 50  0001 C CNN
+	1    5950 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 3850 5950 3850
+Wire Wire Line
+	5950 3850 5950 3900
+Wire Wire Line
+	5350 4500 5350 4450
+Wire Wire Line
+	5350 4450 6150 4450
+Wire Wire Line
+	6150 4450 6150 4500
+Wire Wire Line
+	6350 4500 6350 4350
+Wire Wire Line
+	5950 4200 5950 4500
+Wire Wire Line
+	5550 4250 5750 4250
+Wire Wire Line
+	5550 4250 5550 4500
+Wire Wire Line
+	5750 4250 5750 4500
+Connection ~ 5750 4250
+Wire Wire Line
+	6350 4350 6700 4350
+Wire Wire Line
+	5750 4250 6700 4250
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 5E54E905
+P 6900 4250
+F 0 "J2" H 6980 4196 50  0000 L CNN
+F 1 "Conn_01x02" H 6980 4151 50  0001 L CNN
+F 2 "Sparkfun_Connectors:1X02" H 6900 4250 50  0001 C CNN
+F 3 "~" H 6900 4250 50  0001 C CNN
+	1    6900 4250
+	1    0    0    -1  
+$EndComp
+Text Label 6350 4250 0    50   ~ 0
+INPUT
+Text Label 6350 4350 0    50   ~ 0
+OUTPUT
+Wire Wire Line
+	4950 4950 5450 4950
+Wire Wire Line
+	5450 4950 5450 4900
+Wire Wire Line
+	6250 4950 6250 4900
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 5E555E32
+P 4900 4200
+F 0 "BT1" H 5018 4296 50  0000 L CNN
+F 1 "9V" H 5018 4205 50  0000 L CNN
+F 2 "Sparkfun_Connectors:1X02" V 4900 4260 50  0001 C CNN
+F 3 "~" V 4900 4260 50  0001 C CNN
+	1    4900 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 4000 4750 4000
+Wire Wire Line
+	4750 4000 4750 4200
+Wire Wire Line
+	4750 4200 4450 4200
+$Comp
+L power:VCC #PWR02
+U 1 1 5E55B26A
+P 4600 4100
+F 0 "#PWR02" H 4600 3950 50  0001 C CNN
+F 1 "VCC" H 4617 4273 50  0000 C CNN
+F 2 "" H 4600 4100 50  0001 C CNN
+F 3 "" H 4600 4100 50  0001 C CNN
+	1    4600 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 4100 4600 4100
+$Comp
+L power:VCC #PWR01
+U 1 1 5E55CF6A
+P 5550 3850
+F 0 "#PWR01" H 5550 3700 50  0001 C CNN
+F 1 "VCC" V 5568 3977 50  0000 L CNN
+F 2 "" H 5550 3850 50  0001 C CNN
+F 3 "" H 5550 3850 50  0001 C CNN
+	1    5550 3850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5550 3850 5600 3850
+Wire Wire Line
+	4950 5150 5100 5150
+Wire Wire Line
+	4950 5050 5250 5050
+Wire Wire Line
+	6800 5150 6600 5150
+Wire Wire Line
+	6800 5050 6600 5050
+Wire Wire Line
+	6600 5050 6600 5150
+Wire Wire Line
+	4450 4300 4600 4300
+$Comp
+L power:GND #PWR04
+U 1 1 5E567110
+P 5850 5000
+F 0 "#PWR04" H 5850 4750 50  0001 C CNN
+F 1 "GND" H 5855 4827 50  0000 C CNN
+F 2 "" H 5850 5000 50  0001 C CNN
+F 3 "" H 5850 5000 50  0001 C CNN
+	1    5850 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 4900 5850 5000
+$Comp
+L power:GND #PWR05
+U 1 1 5E56850D
+P 5100 5200
+F 0 "#PWR05" H 5100 4950 50  0001 C CNN
+F 1 "GND" H 5105 5027 50  0000 C CNN
+F 2 "" H 5100 5200 50  0001 C CNN
+F 3 "" H 5100 5200 50  0001 C CNN
+	1    5100 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR06
+U 1 1 5E569063
+P 5250 5200
+F 0 "#PWR06" H 5250 4950 50  0001 C CNN
+F 1 "Earth" H 5250 5050 50  0001 C CNN
+F 2 "" H 5250 5200 50  0001 C CNN
+F 3 "~" H 5250 5200 50  0001 C CNN
+	1    5250 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR03
+U 1 1 5E569E62
+P 4600 4350
+F 0 "#PWR03" H 4600 4100 50  0001 C CNN
+F 1 "Earth" H 4600 4200 50  0001 C CNN
+F 2 "" H 4600 4350 50  0001 C CNN
+F 3 "~" H 4600 4350 50  0001 C CNN
+	1    4600 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 4350 4600 4300
+Connection ~ 4600 4300
+Wire Wire Line
+	4600 4300 4900 4300
+$Comp
+L power:GND #PWR07
+U 1 1 5E56B010
+P 6600 5200
+F 0 "#PWR07" H 6600 4950 50  0001 C CNN
+F 1 "GND" H 6605 5027 50  0000 C CNN
+F 2 "" H 6600 5200 50  0001 C CNN
+F 3 "" H 6600 5200 50  0001 C CNN
+	1    6600 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 5200 6600 5150
+Connection ~ 6600 5150
+Wire Wire Line
+	5100 5150 5100 5200
+Wire Wire Line
+	5250 5200 5250 5050
+Wire Wire Line
+	5900 5850 6300 5850
+Connection ~ 5900 5850
+Connection ~ 5900 5750
+Wire Wire Line
+	6300 5750 5900 5750
+Wire Wire Line
+	5500 5850 5900 5850
+Connection ~ 5500 5850
+Connection ~ 5500 5750
+Wire Wire Line
+	5900 5750 5500 5750
+$Comp
+L Connector_Generic:Conn_01x02 J8
+U 1 1 5E57DFC1
+P 6500 5750
+F 0 "J8" H 6580 5696 50  0000 L CNN
+F 1 "Conn_01x02" H 6580 5651 50  0001 L CNN
+F 2 "Sparkfun_Connectors:1X02" H 6500 5750 50  0001 C CNN
+F 3 "~" H 6500 5750 50  0001 C CNN
+	1    6500 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J7
+U 1 1 5E57DB2E
+P 6100 5750
+F 0 "J7" H 6180 5696 50  0000 L CNN
+F 1 "Conn_01x02" H 6180 5651 50  0001 L CNN
+F 2 "Sparkfun_Connectors:1X02" H 6100 5750 50  0001 C CNN
+F 3 "~" H 6100 5750 50  0001 C CNN
+	1    6100 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 5850 5500 5850
+Connection ~ 5100 5850
+Wire Wire Line
+	4950 5850 5100 5850
+Wire Wire Line
+	5100 5750 5500 5750
+Connection ~ 5100 5750
+Wire Wire Line
+	4950 5750 5100 5750
+$Comp
+L Connector_Generic:Conn_01x02 J6
+U 1 1 5E570E6F
+P 5700 5750
+F 0 "J6" H 5780 5696 50  0000 L CNN
+F 1 "Conn_01x02" H 5780 5651 50  0001 L CNN
+F 2 "Sparkfun_Connectors:1X02" H 5700 5750 50  0001 C CNN
+F 3 "~" H 5700 5750 50  0001 C CNN
+	1    5700 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J5
+U 1 1 5E56ECF4
+P 5300 5750
+F 0 "J5" H 5380 5696 50  0000 L CNN
+F 1 "Conn_01x02" H 5380 5651 50  0001 L CNN
+F 2 "Sparkfun_Connectors:1X02" H 5300 5750 50  0001 C CNN
+F 3 "~" H 5300 5750 50  0001 C CNN
+	1    5300 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 5E56E227
+P 4950 5850
+F 0 "#PWR09" H 4950 5600 50  0001 C CNN
+F 1 "GND" H 4955 5677 50  0000 C CNN
+F 2 "" H 4950 5850 50  0001 C CNN
+F 3 "" H 4950 5850 50  0001 C CNN
+	1    4950 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR08
+U 1 1 5E56DD4D
+P 4950 5750
+F 0 "#PWR08" H 4950 5600 50  0001 C CNN
+F 1 "VCC" H 4967 5923 50  0000 C CNN
+F 2 "" H 4950 5750 50  0001 C CNN
+F 3 "" H 4950 5750 50  0001 C CNN
+	1    4950 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 4950 6250 4950
+$EndSCHEMATC
